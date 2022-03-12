@@ -1,0 +1,303 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+$red: #e74c3c;
+
+*,
+*:before,
+*:after {
+   @include box-sizing(border-box);
+}
+
+@media print
+{
+    #printbtn
+	{
+    display :  none;
+		align : center;
+		color : red;
+    }
+
+}
+
+@page {
+   size: 8.5in 11in;
+   margin: 20mm 16mm 16mm 20mm;
+}
+
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+   text-decoration: bold;
+   @include text-shadow(1px 1px 0 rgba(white, 1));
+}
+
+h4 {
+   text-align: center;
+   color: black;
+   font-size: 22px;
+   text-decoration: bold;
+   
+}
+
+h7 {
+  color: white;
+  font-size: 28px;
+
+}
+
+h5 {
+   text-align: center;
+   color: black;
+   font-size: 12px;
+   text-decoration: bold;
+   text-decoration: underline;
+   text-transform: uppercase;
+}
+
+h6 {
+   text-align: right;
+   font-size: 10px;
+   direction: rtl;
+   text-indent: 8em;
+}
+
+html, body {
+  background: white;
+  font-family: "Times New Roman", Times, serif;
+  line-height: normal;
+  font-size: 14px;
+}
+
+div {
+	 font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+button {
+	color: blue;
+	font-family: "Times New Roman", Times, serif;
+}
+
+a:link {
+  color: #FF5733;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:visited {
+  color: #FF5733;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+fieldset{
+	width: 100%;
+}
+
+#field2 {
+	border: 3px solid;
+}
+
+#field3 {
+	width: 70%;
+}
+
+legend{
+	width: 100%;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+/* Style the header */
+header {
+  background-color: #666;
+  text-align: center;
+  font-size: 20px;
+  color: #FFC300;
+}
+
+form {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.clear {
+    clear:both
+}
+
+form #input-radio {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+
+
+form input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 80%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+form #input-submit {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+
+form #input-button {
+  color: white;
+  background: #30B45A;
+  cursor: pointer;
+  font-size: 20px;
+}
+form #input-button:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  background: #e74c3c;
+  font-size: 20px;
+}
+
+form textarea {
+  height: 126px;
+}
+
+.half {
+float: left;
+width: 48%;
+margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%;
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: center;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* FORMs    */
+
+
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: #FFC300 ;
+}
+
+
+a.tip {
+    text-decoration: none;
+	color: yellow;
+	
+}
+a.tip:hover {
+    cursor: help;
+    position: relative
+}
+a.tip span {
+    display: none
+}
+a.tip:hover span {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background-color: grey;
+    left: 0px;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none
+}
